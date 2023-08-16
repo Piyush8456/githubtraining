@@ -1,0 +1,45 @@
+<div>
+  <button (click)="visibilityOn()">Click here</button>
+  <div *ngIf='visibility; then thenLine else elseLine' ></div>
+  <ng-template #thenLine>
+    <p> Hello my name is piyush </p>
+  </ng-template>
+  <ng-template #elseLine>
+    <p> no line is Here</p>
+  </ng-template>
+  <select (change)="selectItems($event)">
+    <option>Shirt</option>
+    <option>T-shirt</option>
+    <option>Pent</option>
+    <option>Trawser</option>
+  </select>
+  <!-- <h1>{{product}}</h1> -->
+  <div [ngSwitch]="selectProduct">
+    <h2 *ngSwitchCase="'Shirt'">shirt</h2>
+    <h2 *ngSwitchCase="'T-hirt'"> T-shirt</h2>
+    <h2 *ngSwitchCase="'Pent'">Pent</h2>
+    <h2 *ngSwitchCase="'Trawser'">Trawser</h2>
+  </div>
+  <br/><br/>
+  <div>
+    <table>
+      <thead>
+        <th>Item Image</th>
+        <th>Item Name</th>
+        <th>Item Id</th>
+        <th>Item Price</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let it of Item">
+          <td>image</td>
+          <td>{{it.name}}</td>
+          <td>{{it.id}}</td>
+          <td>{{it.price}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+    <br/><br/>
+    
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div>
+  <input type="text" #usr />
+  <button (click)="AddUsers(usr)">Add</button>
+
+  <br /><br />
+
+  <table>
+    <thead>
+      <th>User</th>
+      <th>Remove</th>
+    </thead>
+    <tbody >
+      <tr *ngFor="let usr of users; index as i">
+        <td>{{usr.name}}</td>
+        <td><button style="background-color: red; color: rgb(238, 238, 238);" (click)="RemoveUser(i)" >Remove</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

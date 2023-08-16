@@ -1,0 +1,34 @@
+
+
+
+<h1>angular routing </h1>
+
+
+<button type="button" class="btn btn-primary">
+  <a [routerLink]="['home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+</button>
+<button type="button" class="btn btn-primary">
+  <a [routerLink]="['/Addremovee']" routerLinkActive="active">condition</a>
+</button>
+<button type="button" class="btn btn-primary">
+  <a [routerLink]="['/users']" routerLinkActive="active">users</a>
+</button>
+<button type="button" class="btn btn-primary">
+<a [routerLink]="['/card']" routerLinkActive="active"> products</a>
+</button>
+<button type="button" class="btn btn-primary">
+  <a [routerLink]="['/buy-products']" routerLinkActive="active"> buy-products</a>
+  </button>
+  <button type="button" class="btn btn-primary">
+    <a [routerLink]="['/about']" routerLinkActive="active">about</a>
+    </button>
+    <button type="button" class="btn btn-primary">
+    <a [routerLink]="['/exercise']" routerLinkActive="active">Exercise</a>
+    </button>
+
+<br/><br/>
+
+<router-outlet></router-outlet> 
+
+
+
